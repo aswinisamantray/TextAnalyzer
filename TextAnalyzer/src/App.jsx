@@ -50,19 +50,17 @@ function App() {
   }
   
   return (
-    <div>
-      <BrowserRouter>
-        <Navbar title="TextUtils" mode={Mode} colors={colors} showalert={showalert} toggleMode={toggleMode}/>
+  <BrowserRouter>
+      <Navbar title="TextUtils" mode={Mode} colors={colors} showalert={showalert} toggleMode={toggleMode}/>
         <Alert alert={alert}/>
         <div className="container my-3">
             <Routes>
-            <Route exact path='/' element={<TextForm showalert={showalert} heading="Enter the text to analyse-Word Counter, Character Counter" mode={Mode}/>}/>
-              <Route exact path='/home' element={<TextForm showalert={showalert} heading="Enter the text to analyse-Word Counter, Character Counter" mode={Mode}/>}/>
+            <Route exact path='/' element={<TextForm showalert={showalert} heading="Enter the text to analyse" mode={Mode}/>}/>
+              <Route exact path='/home' element={<TextForm showalert={showalert} heading="Enter the text to analyse" mode={Mode}/>}/>
               <Route exact path='/about' element={<About mode={Mode}/>} />
             </Routes>
           </div>
           </BrowserRouter>
-    </div>
   )
 }
 

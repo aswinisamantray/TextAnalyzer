@@ -1,4 +1,5 @@
 import React , {useState}from 'react'
+import '../TextForm.css'
 // import Navbar from './Navbar';
 export default function TextForm(props) {
 
@@ -82,7 +83,7 @@ const longest=()=>{
   return (
     <div>
         <div className={`container text-${props.mode===`dark`?`light`:`dark`}`}>
-      <h1 className='mb-1'>{props.heading}</h1>
+      <h1 className='mb-1 my-2'>{props.heading}</h1>
       <div className="mb-3">
         <textarea className="form-control" onChange={handleChange} id="myBox" rows="6" value={text} style={myStyle} placeholder="Enter text here....."></textarea>
       </div>
@@ -97,7 +98,7 @@ const longest=()=>{
       <h1>Your text summary</h1>
       <p>{text.length===0?'There is no text':`${count()} words and ${text.length} characters}`}</p> 
       <p>{text.length!==0?`${longest()} is the longest word in your text.`:''}</p>
-      <p>{text.length!==0?`${longest().length} is the length of {longest()}.`:''}</p>
+      <p>{text.length!==0?`${longest().length} is the length of ${longest()}.`:''}</p>
       <p>{text.length!==0?`The text has ${countParagraph()} paragraphs.`:''}</p>
       <input className="form-control me-2" type="search" onChange={findText} placeholder="Search" aria-label="Search"/>
       <button disabled={search.length===0} className="btn btn-primary my-2" type="submit" onClick={findText} >Search</button>

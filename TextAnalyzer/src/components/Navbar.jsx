@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
   
     
   return(
-  <div>
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
     <div className="container-fluid">
       <Link className="navbar-brand" to="#">{props.title}</Link>
@@ -36,7 +35,6 @@ import { Link } from "react-router-dom";
       </div>
     </div>
     </nav>  
-  </div>  
 )
 
 }
